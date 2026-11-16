@@ -9,7 +9,7 @@ using namespace std;
 const int SIZE = 9;
 const int TOTAL_MINES = 10;
 
-// Place 10 random mines
+
 void placeMines(vector<vector<int>>& board)
 {
     random_device rd;
@@ -32,7 +32,6 @@ void placeMines(vector<vector<int>>& board)
     }
 }
 
-// Calculate neighbouring mines
 void calculateNumbers(vector<vector<int>>& board)
 {
     for (int i = 0; i < SIZE; i++)
@@ -65,7 +64,6 @@ void calculateNumbers(vector<vector<int>>& board)
     }
 }
 
-// Display internal board for testing
 void showInternalBoard(const vector<vector<int>>& board)
 {
     cout << "\nINTERNAL BOARD (Testing Only)\n\n";
@@ -92,7 +90,7 @@ void showInternalBoard(const vector<vector<int>>& board)
     }
 }
 
-// Display player's covered board
+
 void showDisplayBoard(const vector<vector<char>>& displayBoard)
 {
     cout << "\nPLAYER BOARD\n\n";
@@ -116,12 +114,12 @@ void showDisplayBoard(const vector<vector<char>>& displayBoard)
 
 int main()
 {
-    // Create internal vector board
+    
     vector<vector<int>> board(
         SIZE, vector<int>(SIZE, 0)
     );
 
-    // Create player's display board
+    
     vector<vector<char>> displayBoard(
         SIZE, vector<char>(SIZE, '#')
     );
